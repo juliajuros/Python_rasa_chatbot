@@ -1,0 +1,81 @@
+version: "1.0.0"
+
+nlu:
+  - intent: greet
+    examples: |
+      - Hey
+      - Hi
+      - Good morning
+      - Good evening
+      - Hello
+      - Hi there
+      - Hey there
+
+  - intent: ask_opening_hours
+    examples: |
+      - What are your opening hours?
+      - Tell me the opening hours
+      - When are you open?
+
+  - intent: ask_opening_hours_day
+    examples: |
+      - What are your hours on [Monday](day)?
+      - What time do you open on [Sunday](day)?
+      - When do you close on [Friday](day)?
+      - What are the opening hours for [Monday](day)?
+      - What are the opening hours for [Wednesday](day)?
+
+  - intent: menu_items
+    examples: |
+      - What is on the menu?
+      - Show me your menu
+      - What food do you have?
+      - Can I see the food list?
+      - Can you tell me what food you have?
+      - Could you show me the menu, please?
+      - I'd like to know what's on your menu.
+      - May I see the menu?
+      - Can you tell me what's available?
+
+  - intent: place_order
+    examples: |
+      - I would like to order a [pizza](meal).
+      - Can I get a [pizza](meal)?
+      - I'd like to order a [pizza](meal).
+      - Please prepare a [pizza](meal).
+      - Can I order a [pizza](meal).
+      - I'd like a [pizza](meal).
+      - Give me a [pizza](meal).
+
+  - intent: additional_requests
+    examples: |
+      - Can you add [extra cheese](modification)?
+      - I'd like [extra cheese](modification)
+      - Make it [spicy](modification), please.
+      - Can you add [extra cheese](modification)?
+      - No
+      - No, thank you
+
+  - intent: confirm_order
+    examples: |
+      - Yes
+      - That's right
+      - Yes, that's correct
+      - Yes, please
+      - That's everything, thanks
+
+  - intent: give_address
+    examples: |
+      - I live at [Sienna 15, Krakow](delivery_address)
+      - Please deliver it to [Sienna 15, Krakow](delivery_address)
+      - My address is [Sienna 15, Krakow](delivery_address)
+      - Deliver it to my home at [Sienna 15, Krakow](delivery_address)
+
+  - intent: goodbye
+    examples: |
+      - Goodbye
+      - See you later
+      - Bye
+      - See you!
+
+      

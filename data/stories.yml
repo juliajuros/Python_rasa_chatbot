@@ -1,0 +1,34 @@
+version: "1.0.0"
+
+stories:
+  - story: User places an order and skips modifications
+    steps:
+      - intent: place_order
+        entities:
+          - meal
+      - action: action_place_order
+      - intent: additional_requests
+      - action: action_add_modifications
+      - intent: confirm_order
+      - action: utter_ask_delivery_address
+      - intent: give_address
+        entities:
+          - delivery_address
+      - action: action_finalize_order
+
+  - story: User adds modifications
+    steps:
+      - intent: place_order
+        entities:
+          - meal
+      - action: action_place_order
+      - intent: additional_requests
+        entities:
+          - modification
+      - action: action_add_modifications
+      - intent: confirm_order
+      - action: utter_ask_delivery_address
+      - intent: give_address
+        entities:
+          - delivery_address
+      - action: action_finalize_order

@@ -1,0 +1,67 @@
+intents:
+  - greet
+  - ask_opening_hours
+  - ask_opening_hours_day
+  - menu_items
+  - place_order
+  - additional_requests
+  - confirm_order
+  - give_address
+  - goodbye
+  
+entities:
+  - day
+  - meal
+  - modification
+  - delivery_address
+
+slots:
+  day:
+    type: text
+    influence_conversation: false
+    mappings:
+      - type: from_entity
+        entity: day
+
+  meal:
+    type: text
+    influence_conversation: false
+    mappings:
+      - type: from_entity
+        entity: meal
+
+  modification:
+    type: text
+    influence_conversation: false
+    mappings:
+      - type: from_entity
+        entity: modification
+
+  ready_time:
+    type: text
+    influence_conversation: false
+    mappings: []
+
+  delivery_address:
+    type: text
+    influence_conversation: false
+    mappings:
+      - type: from_entity
+        entity: delivery_address
+
+responses:
+  utter_greet:
+    - text: "Hello! What can I do for you today?"
+  utter_goodbye:
+    - text: "Goodbye! Have a great day."
+  utter_ask_delivery_address:
+    - text: "Could you please provide your delivery address?"
+
+
+actions:
+  - action_get_opening_hours
+  - action_list_menu
+  - action_place_order
+  - action_add_modifications
+  - action_deliver_address
+  - action_finalize_order

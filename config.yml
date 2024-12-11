@@ -1,0 +1,16 @@
+language: en
+
+pipeline:
+- name: "WhitespaceTokenizer"
+- name: "RegexFeaturizer"
+- name: "CountVectorsFeaturizer"
+- name: "LexicalSyntacticFeaturizer"
+- name: "DIETClassifier"
+- name: "EntitySynonymMapper"
+- name: "ResponseSelector"
+
+policies:
+- name: "RulePolicy"
+- name: "MemoizationPolicy"
+- name: "TEDPolicy"
+assistant_id: 20241118-201826-advanced-coriander
