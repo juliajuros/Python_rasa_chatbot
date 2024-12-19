@@ -10,7 +10,7 @@ To setup the enviroment you need to
 ```
 python -m venv .venv
 source .venv/bin/activate 
-pip install requirements.txt
+pip install -r requirements.txt
 ````
 
 Then to run chatbot
