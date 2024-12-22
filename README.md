@@ -27,3 +27,4 @@ python discord_connector.py
 ```
 
 Now your chatbot is ready!
+You can test it now on discord https://discord.gg/ncXu7e6X
