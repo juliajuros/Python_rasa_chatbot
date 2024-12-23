@@ -48,6 +48,7 @@ slots:
     mappings:
       - type: from_entity
         entity: delivery_address
+        intent: give_address
 
 responses:
   utter_greet:

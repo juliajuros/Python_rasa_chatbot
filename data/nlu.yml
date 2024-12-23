@@ -66,10 +66,10 @@ nlu:
 
   - intent: give_address
     examples: |
-      - I live at [Sienna 15, Krakow](delivery_address)
+      - I live at [Kościuszki 123, Kraków](delivery_address)
       - Please deliver it to [Sienna 15, Krakow](delivery_address)
-      - My address is [Sienna 15, Krakow](delivery_address)
-      - Deliver it to my home at [Sienna 15, Krakow](delivery_address)
+      - My address is [Bracka 15/12, Krakow](delivery_address)
+      - Deliver it to my home at [Marszałkowska 234/124, Warszawa](delivery_address)
 
   - intent: goodbye
     examples: |

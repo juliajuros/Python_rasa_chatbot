@@ -108,7 +108,10 @@ class ActionFinalizeOrder(Action):
 
     def run(self, dispatcher: CollectingDispatcher, tracker: Tracker, domain: dict) -> list:
         ready_time = tracker.get_slot("ready_time")
-        delivery_address = tracker.get_slot("delivery_address")
+        
+        entities = tracker.latest_message.get("entities", [])
+        address_parts = [e["value"] for e in entities if e["entity"] == "delivery_address"]
+        delivery_address = ", ".join(address_parts) if address_parts else tracker.get_slot("delivery_address")
         
         response = f"Great! Your order has been finalized and will be ready at {ready_time}. Your order will be delivered to {delivery_address}. Enjoy your meal!"
         
