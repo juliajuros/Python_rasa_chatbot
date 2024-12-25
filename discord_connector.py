@@ -1,9 +1,12 @@
 import discord
 import requests
-import asyncio
 from discord.ext import commands
+import os
 
-DISCORD_TOKEN = "MTMxODU1MDI2NjgxNDkyMjkxMg.GTkmTJ.y_I0agGOHUjDD1hQR-8E32n_gD6y9uKth0F9cI"
+DISCORD_TOKEN = os.getenv("DISCORD_TOKEN")
+
+if not DISCORD_TOKEN:
+    raise ValueError("DISCORD_TOKEN is not set")
 
 RASA_WEBHOOK_URL = "http://localhost:5005/webhooks/rest/webhook"
 

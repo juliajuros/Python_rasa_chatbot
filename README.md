@@ -13,18 +13,24 @@ source .venv/bin/activate
 pip install -r requirements.txt
 ````
 
+and set enviroment variable `DISCORD_TOKEN`
+```
+set DISCORD_TOKEN="your_token_number" # windows
+export DISCORD_TOKEN="your_token_number" #linux/mac
+```
+
 Then to run chatbot
-```
-rasa run actions
-```
-and in different terminal
-```
-rasa run
-```
-and also run
 ```
 python discord_connector.py
 ```
+and in different terminal
+```
+rasa run actions
+```
+and also run
+```
+rasa run
+```
 
 Now your chatbot is ready!
-You can test it now on discord https://discord.gg/ncXu7e6X
+You can test it now on discord
